@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better battery, bigger screen: Google Pixel Watch 3 is fine-tuned for fitness</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Google Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #202124;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .article-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .title {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #1a73e8;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #5f6368;
+            margin-bottom: 1rem;
+        }
+        
+        .author {
+            font-size: 0.9rem;
+            color: #5f6368;
+        }
+        
+        .main-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-content h2 {
+            color: #1a73e8;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e8eaed;
+        }
+        
+        .highlight-box {
+            background-color: #e8f0fe;
+            border-left: 4px solid #1a73e8;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .note {
+            background-color: #fef7e0;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e8eaed;
+            font-size: 0.9rem;
+            color: #5f6368;
+            text-align: center;
+        }
+        
+        /* iTabs Styling */
+        .itab-container {
+            font-family: inherit;
+            max-width: 100%;
+            margin: 20px 0;
+            border: 2px solid #1a73e8;
+            border-radius: 8px;
+            overflow: hidden;
+            display: none;
+            position: absolute;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 400px;
+            z-index: 1000;
+        }
+        
+        .tab-buttons {
+            display: flex;
+            background: #f1f3f4;
+            border-bottom: 1px solid #dadce0;
+            flex-wrap: wrap;
+        }
+        
+        .tab-button {
+            padding: 10px 15px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-weight: 500;
+            color: #5f6368;
+            transition: all 0.2s ease;
+            font-family: 'Google Sans', Arial, sans-serif;
+            font-size: 14px;
+        }
+        
+        .tab-button:hover {
+            color: #1a73e8;
+            background: #f8f9fa;
+        }
+        
+        .tab-button.active {
+            color: #1a73e8;
+            border-bottom: 3px solid #1a73e8;
+            background: white;
+        }
+        
+        .tab-panel {
+            display: none;
+            padding: 15px;
+        }
+        
+        .tab-panel.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .tab-panel img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+        
+        .word-with-itab {
+            position: relative;
+            display: inline;
+            color: #1a73e8;
+            font-weight: 500;
+            border-bottom: 1px dotted #1a73e8;
+            cursor: pointer;
+        }
+        
+        .itabs-link-button {
+            display: inline-block;
+            margin: 10px 15px 15px;
+            padding: 8px 16px;
+            background: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background 0.2s ease;
+            text-align: center;
+        }
+        
+        .itabs-link-button:hover {
+            background: #1557b0;
+        }
+        
+        .itab-icon {
+            width: 14px;
+            height: 14px;
+            background-color: #1a73e8;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 4px;
+            color: white;
+            font-size: 10px;
+            vertical-align: super;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .itab-icon:hover {
+            transform: scale(1.2);
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .specs-card {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 6px;
+        }
+        
+        .specs-title {
+            font-weight: 500;
+            color: #1a73e8;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .specs-value {
+            font-size: 14px;
+        }
+        
+        .rating-stars {
+            color: #fbbc04;
+            font-size: 16px;
+            margin-right: 5px;
+        }
+        
+        .price-tag {
+            font-size: 1.5em;
+            font-weight: 500;
+            color: #1a73e8;
+            margin: 15px 0;
+        }
+        
+        .feature-list li {
+            margin-bottom: 10px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        
+        .comparison-table th {
+            background: #f1f3f4;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        .comparison-table td {
+            padding: 8px;
+            border-bottom: 1px solid #dadce0;
+        }
+        
+        .better {
+            color: #0d652d;
+            font-weight: 500;
+        }
+        
+        .same {
+            color: #5f6368;
+        }
+        
+        .worse {
+            color: #c5221f;
+        }
+        
+        @media (max-width: 600px) {
+            .itab-container {
+                width: 95%;
+                left: 2.5% !important;
+                right: 2.5% !important;
+            }
+            
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tab-button {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-header">
+        <h1 class="title">Better battery, bigger screen: Google Pixel Watch 3 is fine-tuned for fitness</h1>
+        <p class="subtitle">Google's latest smartwatch brings significant improvements to battery life, design, and fitness tracking capabilities</p>
+        <p class="author">By Google Australia Blog Team | September 5, 2024</p>
+    </div>
+    
+    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Lead_00_Header_1.width-1600.jpg" alt="Google Pixel Watch 3" class="main-image">
+    
+    <div class="article-content">
+        <p>Today we're introducing the new <span class="word-with-itab" data-itab-id="pixelwatch-overview">Google Pixel Watch 3<span class="itab-icon">i</span></span>, our most advanced wearable yet. With a larger display, significantly improved battery life, and enhanced fitness tracking capabilities, the Pixel Watch 3 is designed to be the perfect companion for anyone looking to take their health and fitness journey to the next level.</p>
+        
+        <!-- Pixel Watch Overview iTabs -->
+        <div id="pixelwatch-overview" class="itab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="overview-tab">Overview</button>
+                <button class="tab-button" data-tab="whats-new-tab">What's New</button>
+                <button class="tab-button" data-tab="models-tab">Models</button>
+            </div>
+            <div class="tab-content">
+                <div id="overview-tab" class="tab-panel active">
+                    <p>The Google Pixel Watch 3 is Google's third-generation smartwatch, designed to work seamlessly with Android phones and Pixel devices. It combines Google's software expertise with advanced health and fitness tracking powered by Fitbit.</p>
+                    <ul class="feature-list">
+                        <li>Available in two sizes: 41mm and 45mm</li>
+                        <li>Up to 36 hours of battery life</li>
+                        <li>Advanced fitness tracking with Fitbit integration</li>
+                        <li>Wear OS 5 with Google Assistant, Maps, and Wallet</li>
+                        <li>New AI-powered features for personalized insights</li>
+                    </ul>
+                </div>
+                <div id="whats-new-tab" class="tab-panel">
+                    <p><strong>Key improvements over Pixel Watch 2:</strong></p>
+                    <ul class="feature-list">
+                        <li>New 45mm size option with 20% larger display</li>
+                        <li>30% longer battery life (up to 36 hours)</li>
+                        <li>More powerful processor for smoother performance</li>
+                        <li>Enhanced heart rate sensor with greater accuracy</li>
+                        <li>New sleep apnea detection capability</li>
+                        <li>Improved GPS accuracy for outdoor activities</li>
+                    </ul>
+                </div>
+                <div id="models-tab" class="tab-panel">
+                    <p><strong>Available Variants:</strong></p>
+                    <div class="specs-grid">
+                        <div class="specs-card">
+                            <div class="specs-title">41mm Bluetooth/Wi-Fi</div>
+                            <div class="specs-value">$399</div>
+                        </div>
+                        <div class="specs-card">
+                            <div class="specs-title">41mm 4G LTE</div>
+                            <div class="specs-value">$499</div>
+                        </div>
+                        <div class="specs-card">
+                            <div class="specs-title">45mm Bluetooth/Wi-Fi</div>
+                            <div class="specs-value">$429</div>
+                        </div>
+                        <div class="specs-card">
+                            <div class="specs-title">45mm 4G LTE</div>
+                            <div class="specs-value">$529</div>
+                        </div>
+                    </div>
+                    <p><strong>Color Options:</strong> Matte Black, Polished Silver, Champagne Gold, Hazel</p>
+                </div>
+            </div>
+            <a href="https://store.google.com/product/pixel_watch_3" class="itabs-link-button" target="_blank">Learn More</a>
+        </div>
+        
+        <h2>A new size and improved battery life</h2>
+        
+        <p>One of the most exciting updates to the Pixel Watch 3 is the introduction of a new 45mm size option, featuring a <span class="word-with-itab" data-itab-id="display-specs">larger display<span class="itab-icon">i</span></span> that provides more space for your apps, workouts, and notifications. The original 41mm size is still available for those who prefer a more compact watch.</p>
+        
+        <!-- Display Specs iTabs -->
+        <div id="display-specs" class="itab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="display-overview">Display</button>
+                <button class="tab-button" data-tab="display-tech">Technology</button>
+                <button class="tab-button" data-tab="display-comparison">Size Comparison</button>
+            </div>
+            <div class="tab-content">
+                <div id="display-overview" class="tab-panel active">
+                    <p><strong>Display Specifications:</strong></p>
+                    <ul class="feature-list">
+                        <li>41mm: 1.2-inch AMOLED display</li>
+                        <li>45mm: 1.4-inch AMOLED display (20% larger than Pixel Watch 2)</li>
+                        <li>Up to 1000 nits brightness for better outdoor visibility</li>
+                        <li>Always-on display option with power-efficient mode</li>
+                        <li>Corning Gorilla Glass 5 protection</li>
+                    </ul>
+                </div>
+                <div id="display-tech" class="tab-panel">
+                    <p>The Pixel Watch 3 features an LTPO AMOLED display technology that enables a variable refresh rate from 1Hz to 60Hz, helping to conserve battery when displaying static content while providing smooth animations when needed.</p>
+                    
+                    <p>The display has a pixel density of 320 PPI, providing crisp text and vibrant colors. The enhanced brightness makes it easier to read in bright sunlight, while the always-on display now uses 30% less power than the previous generation.</p>
+                </div>
+                <div id="display-comparison" class="tab-panel">
+                    <table class="comparison-table">
+                        <tr>
+                            <th>Model</th>
+                            <th>Size</th>
+                            <th>Resolution</th>
+                            <th>Max Brightness</th>
+                        </tr>
+                        <tr>
+                            <td>Pixel Watch 2</td>
+                            <td>1.2"</td>
+                            <td>450 x 450</td>
+                            <td>800 nits</td>
+                        </tr>
+                        <tr>
+                            <td>Pixel Watch 3 (41mm)</td>
+                            <td>1.2"</td>
+                            <td>450 x 450</td>
+                            <td class="better">1000 nits</td>
+                        </tr>
+                        <tr>
+                            <td>Pixel Watch 3 (45mm)</td>
+                            <td class="better">1.4"</td>
+                            <td class="better">480 x 480</td>
+                            <td class="better">1000 nits</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Screenshot_2023-09-14_at_1.50.43_PM.width-1600.png" alt="Pixel Watch 3 Display">
+        </div>
+        
+        <p>Battery life has been a major focus for this generation. The Pixel Watch 3 delivers up to <span class="word-with-itab" data-itab-id="battery-specs">36 hours of battery life<span class="itab-icon">i</span></span> with normal use – a 30% improvement over the previous model. Enable Battery Saver mode, and you can extend that to an impressive 60 hours, perfect for weekend trips or overnight adventures.</p>
+        
+        <!-- Battery Specs iTabs -->
+        <div id="battery-specs" class="itab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="battery-overview">Battery Life</button>
+                <button class="tab-button" data-tab="battery-modes">Power Modes</button>
+                <button class="tab-button" data-tab="battery-charging">Charging</button>
+            </div>
+            <div class="tab-content">
+                <div id="battery-overview" class="tab-panel active">
+                    <p><strong>Battery Specifications:</strong></p>
+                    <ul class="feature-list">
+                        <li>41mm: 306mAh battery</li>
+                        <li>45mm: 420mAh battery</li>
+                        <li>Normal use: Up to 36 hours</li>
+                        <li>Battery Saver mode: Up to 60 hours</li>
+                        <li>GPS workout tracking: Up to 10 hours continuous</li>
+                    </ul>
+                </div>
+                <div id="battery-modes" class="tab-panel">
+                    <p>The Pixel Watch 3 offers several power modes to help you manage battery life:</p>
+                    
+                    <p><strong>Normal Mode:</strong> Full functionality with 36 hours of typical use.</p>
+                    
+                    <p><strong>Battery Saver:</strong> Extends battery life to 60 hours by reducing screen brightness, limiting background activities, and disabling always-on display.</p>
+                    
+                    <p><strong>Time Only Mode:</strong> When your battery is critically low, the watch can switch to a time-only display that can last for up to 24 additional hours.</p>
+                    
+                    <p><strong>Bedtime Mode:</strong> Disables the display and notifications during your designated sleep hours to conserve battery.</p>
+                </div>
+                <div id="battery-charging" class="tab-panel">
+                    <p>The Pixel Watch 3 comes with improved fast charging capabilities:</p>
+                    
+                    <ul class="feature-list">
+                        <li>0 to 50% in just 30 minutes</li>
+                        <li>0 to 80% in 45 minutes</li>
+                        <li>Full charge in about 80 minutes</li>
+                    </ul>
+                    
+                    <p>The watch uses a magnetic charging cable that's backward compatible with previous Pixel Watch chargers, and it's Qi-certified for use with compatible wireless chargers.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="highlight-box">
+            <p>"We focused on addressing the top requests from Pixel Watch users," said Sandeep Waraich, Director of Product Management for Pixel Watch. "Better battery life, a larger size option, and more advanced fitness features were consistently at the top of the list. The Pixel Watch 3 delivers on all three."</p>
+        </div>
+    </div>
+    
+    <!-- JavaScript for iTabs functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching functionality
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabContainer = button.closest('.itab-container');
+                    const tabId = button.getAttribute('data-tab');
+                    
+                    // Deactivate all tabs in this container
+                    tabContainer.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+                    tabContainer.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                    
+                    // Activate the selected tab
+                    button.classList.add('active');
+                    tabContainer.querySelector('#' + tabId).classList.add('active');
+                });
+            });
+            
+            // iTabs icon click functionality
+            document.querySelectorAll('.itab-icon').forEach(icon => {
+                icon.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const parentSpan = this.closest('.word-with-itab');
+                    const itabId = parentSpan.getAttribute('data-itab-id');
+                    const itabElement = document.getElementById(itabId);
+                    
+                    // Close all open iTabs
+                    document.querySelectorAll('.itab-container').forEach(container => {
+                        container.style.display = 'none';
+                    });
+                    
+                    // Position and show the selected iTab
+                    if (itabElement) {
+                        const iconRect = this.getBoundingClientRect();
+                        itabElement.style.display = 'block';
+                        itabElement.style.top = (iconRect.bottom + window.scrollY + 5) + 'px';
+                        itabElement.style.left = Math.max(0, iconRect.left + window.scrollX - 180) + 'px';
+                    }
+                });
+            });
+            
+            // Close iTabs when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.word-with-itab') && !e.target.closest('.itab-container')) {
+                    document.querySelectorAll('.itab-container').forEach(container => {
+                        container.style.display = 'none';
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better battery, bigger screen: Google Pixel Watch 3 is fine-tuned for fitness (Part 2)</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Google Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #202124;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-content h2 {
+            color: #1a73e8;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e8eaed;
+        }
+        
+        .highlight-box {
+            background-color: #e8f0fe;
+            border-left: 4px solid #1a73e8;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .note {
+            background-color: #fef7e0;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e8eaed;
+            font-size: 0.9rem;
+            color: #5f6368;
+            text-align: center;
+        }
+        
+        /* iTabs Styling */
+        .itab-container {
+            font-family: inherit;
+            max-width: 100%;
+            margin: 20px 0;
+            border: 2px solid #1a73e8;
+            border-radius: 8px;
+            overflow: hidden;
+            display: none;
+            position: absolute;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 400px;
+            z-index: 1000;
+        }
+        
+        .tab-buttons {
+            display: flex;
+            background: #f1f3f4;
+            border-bottom: 1px solid #dadce0;
+            flex-wrap: wrap;
+        }
+        
+        .tab-button {
+            padding: 10px 15px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-weight: 500;
+            color: #5f6368;
+            transition: all 0.2s ease;
+            font-family: 'Google Sans', Arial, sans-serif;
+            font-size: 14px;
+        }
+        
+        .tab-button:hover {
+            color: #1a73e8;
+            background: #f8f9fa;
+        }
+        
+        .tab-button.active {
+            color: #1a73e8;
+            border-bottom: 3px solid #1a73e8;
+            background: white;
+        }
+        
+        .tab-panel {
+            display: none;
+            padding: 15px;
+        }
+        
+        .tab-panel.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .tab-panel img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+        
+        .word-with-itab {
+            position: relative;
+            display: inline;
+            color: #1a73e8;
+            font-weight: 500;
+            border-bottom: 1px dotted #1a73e8;
+            cursor: pointer;
+        }
+        
+        .itabs-link-button {
+            display: inline-block;
+            margin: 10px 15px 15px;
+            padding: 8px 16px;
+            background: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background 0.2s ease;
+            text-align: center;
+        }
+        
+        .itabs-link-button:hover {
+            background: #1557b0;
+        }
+        
+        .itab-icon {
+            width: 14px;
+            height: 14px;
+            background-color: #1a73e8;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 4px;
+            color: white;
+            font-size: 10px;
+            vertical-align: super;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .itab-icon:hover {
+            transform: scale(1.2);
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .specs-card {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 6px;
+        }
+        
+        .specs-title {
+            font-weight: 500;
+            color: #1a73e8;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .specs-value {
+            font-size: 14px;
+        }
+        
+        .rating-stars {
+            color: #fbbc04;
+            font-size: 16px;
+            margin-right: 5px;
+        }
+        
+        .price-tag {
+            font-size: 1.5em;
+            font-weight: 500;
+            color: #1a73e8;
+            margin: 15px 0;
+        }
+        
+        .feature-list li {
+            margin-bottom: 10px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        
+        .comparison-table th {
+            background: #f1f3f4;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        .comparison-table td {
+            padding: 8px;
+            border-bottom: 1px solid #dadce0;
+        }
+        
+        .better {
+            color: #0d652d;
+            font-weight: 500;
+        }
+        
+        .same {
+            color: #5f6368;
+        }
+        
+        .worse {
+            color: #c5221f;
+        }
+        
+        @media (max-width: 600px) {
+            .itab-container {
+                width: 95%;
+                left: 2.5% !important;
+                right: 2.5% !important;
+            }
+            
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tab-button {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-content">
+        <h2>Fine-tuned for fitness</h2>
+        
+        <p>Building on Google's acquisition of Fitbit, the Pixel Watch 3 takes <span class="word-with-itab" data-itab-id="fitness-features">fitness tracking<span class="itab-icon">i</span></span> to the next level with improved sensors, more accurate algorithms, and new workout features that help you train smarter, not just harder.</p>
+        
+        <!-- Fitness Features iTabs -->
+        <div id="fitness-features" class="itab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="fitness-tracking">Activity Tracking</button>
+                <button class="tab-button" data-tab="fitness-health">Health Monitoring</button>
+                <button class="tab-button" data-tab="fitness-sleep">Sleep Insights</button>
+            </div>
+            <div class="tab-content">
+                <div id="fitness-tracking" class="tab-panel active">
+                    <p>The Pixel Watch 3 supports over 40 workout types with advanced tracking capabilities:</p>
+                    
+                    <ul class="feature-list">
+                        <li><strong>Auto-workout detection</strong> for running, walking, elliptical, swimming, and cycling</li>
+                        <li><strong>Zone training</strong> with customized heart rate zones and real-time guidance</li>
+                        <li><strong>Improved GPS accuracy</strong> with dual-frequency support for more precise route tracking</li>
+                        <li><strong>Personal pace training</strong> with target pace alerts during runs</li>
+                        <li><strong>Workout summaries</strong> with detailed metrics and recovery recommendations</li>
+                    </ul>
+                    
+                    <p>New AI-powered features can analyze your movements to provide form feedback and suggest exercises that complement your routine.</p>
+                </div>
+                <div id="fitness-health" class="tab-panel">
+                    <p>Comprehensive health monitoring features include:</p>
+                    
+                    <ul class="feature-list">
+                        <li><strong>Enhanced heart rate sensor</strong> with 24/7 monitoring and improved accuracy</li>
+                        <li><strong>ECG app</strong> for on-demand heart rhythm assessments</li>
+                        <li><strong>Irregular heart rhythm notifications</strong> that can detect signs of atrial fibrillation</li>
+                        <li><strong>Blood oxygen saturation (SpO2) monitoring</strong> during sleep</li>
+                        <li><strong>Stress tracking</strong> with guided breathing exercises</li>
+                        <li><strong>Skin temperature tracking</strong> for cycle and illness detection</li>
+                        <li><strong>NEW: Sleep apnea detection</strong> through overnight monitoring patterns</li>
+                    </ul>
+                </div>
+                <div id="fitness-sleep" class="tab-panel">
+                    <p>The Pixel Watch 3 provides comprehensive sleep insights:</p>
+                    
+                    <ul class="feature-list">
+                        <li><strong>Detailed sleep stages</strong> (light, deep, REM) with time in each stage</li>
+                        <li><strong>Sleep Score</strong> that rates your overall sleep quality</li>
+                        <li><strong>Sleep consistency metrics</strong> to help establish better routines</li>
+                        <li><strong>Snore detection</strong> using the built-in microphone</li>
+                        <li><strong>Smart wake</strong> alarm that wakes you during lighter sleep phases</li>
+                        <li><strong>Personalized sleep insights</strong> with AI-powered recommendations</li>
+                    </ul>
+                    
+                    <p>The new Sleep Profile feature analyzes your sleep patterns over time and identifies your "sleep animal" type with tailored recommendations.</p>
+                </div>
+            </div>
+            <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/1_LK-6mYnqO8nkqvFEecn2aQ.width-1600.jpg" alt="Fitness tracking on Pixel Watch 3">
+        </div>
+        
+        <p>The enhanced heart rate sensor provides more accurate readings during high-intensity workouts, while the new multi-path algorithm helps maintain accurate tracking regardless of how you wear your watch. For runners, the new pace training feature helps you maintain your target pace with gentle haptic feedback when you're going too fast or too slow.</p>
+        
+        <p>Sleep tracking has also been enhanced with the addition of <span class="word-with-itab" data-itab-id="sleep-apnea">sleep apnea detection<span class="itab-icon">i</span></span>, a potentially life-saving feature that can identify signs of this common but often undiagnosed sleep disorder.</p>
+        
+        <!-- Sleep Apnea iTabs -->
+        <div id="sleep-apnea" class="itab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="apnea-feature">About the Feature</button>
+                <button class="tab-button" data-tab="apnea-detection">How It Works</button>
+                <button class="tab-button" data-tab="apnea-health">Health Impact</button>
+            </div>
+            <div class="tab-content">
+                <div id="apnea-feature" class="tab-panel active">
+                    <p>Sleep apnea detection is a new health monitoring feature on the Pixel Watch 3 that can identify potential signs of sleep apnea, a serious sleep disorder that causes breathing to repeatedly stop and start during sleep.</p>
+                    
+                    <p>This feature has received FDA clearance for detecting moderate to severe cases of sleep apnea, making the Pixel Watch 3 one of the first smartwatches to offer this capability without requiring additional accessories.</p>
+                </div>
+                <div id="apnea-detection" class="tab-panel">
+                    <p>The sleep apnea detection system works by combining multiple sensors:</p>
+                    
+                    <ul class="feature-list">
+                        <li><strong>Blood oxygen monitoring</strong> to detect drops that occur during apnea events</li>
+                        <li><strong>Heart rate variability analysis</strong> to identify patterns associated with sleep disruptions</li>
+                        <li><strong>Accelerometer data</strong> to detect movement patterns consistent with apnea</li>
+                        <li><strong>Sleep stage tracking</strong> to identify unusual sleep patterns</li>
+                    </ul>
+                    
+                    <p>The watch analyzes this data over several nights to build a comprehensive sleep profile before providing any notifications about potential sleep apnea.</p>
+                </div>
+                <div id="apnea-health" class="tab-panel">
+                    <p>Sleep apnea affects an estimated 22 million Americans, with 80% of moderate to severe cases going undiagnosed. If left untreated, sleep apnea can contribute to serious health problems:</p>
+                    
+                    <ul class="feature-list">
+                        <li>High blood pressure</li>
+                        <li>Heart disease</li>
+                        <li>Type 2 diabetes</li>
+                        <li>Stroke risk</li>
+                        <li>Daytime fatigue</li>
+                    </ul>
+                    
+                    <p><strong>Note:</strong> The Pixel Watch sleep apnea detection feature is not intended to replace professional medical diagnosis. Users who receive notifications should consult with healthcare providers for proper evaluation.</p>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Smarter software and seamless integration</h2>
+        
+        <p>Running on the latest <span class="word-with-itab" data-itab-id="wearos-features">Wear OS 5<span class="itab-icon">i</span></span>, the Pixel Watch 3 offers a refined software experience with smooth animations, thoughtful navigation, and AI-powered features that make it more helpful throughout your day.</p>
+        
+        <!-- Wear OS Features iTabs -->
+        <div id="wearos-features" class="itab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="os-overview">Wear OS 5</button>
+                <button class="tab-button" data-tab="os-ai">AI Features</button>
+                <button class="tab-button" data-tab="os-apps">Google Apps</button>
+            </div>
+            <div class="tab-content">
+                <div id="os-overview" class="tab-panel active">
+                    <p>Wear OS 5 brings numerous improvements to the Pixel Watch 3:</p>
+                    
+                    <ul class="feature-list">
+                        <li><strong>30% faster app loading times</strong> compared to Wear OS 4</li>
+                        <li><strong>Redesigned quick settings</strong> for easier access to commonly used functions</li>
+                        <li><strong>Enhanced notification handling</strong> with smart grouping and priority features</li>
+                        <li><strong>More customizable watch faces</strong> with improved complications</li>
+                        <li><strong>Battery optimization</strong> for longer life and better performance</li>
+                    </ul>
+                </div>
+                <div id="os-ai" class="tab-panel">
+                    <p>The Pixel Watch 3 incorporates AI features that make it more helpful:</p>
+                    
+                    <ul class="feature-list">
+                        <li><strong>Smart replies</strong> that learn from your communication style</li>
+                        <li><strong>Proactive suggestions</strong> based on your schedule and activities</li>
+                        <li><strong>Fitness insights</strong> that adapt to your training patterns</li>
+                        <li><strong>Voice typing</strong> with on-device processing for faster, more accurate text input</li>
+                        <li><strong>AI-powered battery management</strong> that adapts to your usage patterns</li>
+                    </ul>
+                </div>
+                <div id="os-apps" class="tab-panel">
+                    <p>Seamless integration with Google services:</p>
+                    
+                    <ul class="feature-list">
+                        <li><strong>Google Assistant</strong> with enhanced on-device capabilities</li>
+                        <li><strong>Google Maps</strong> with turn-by-turn navigation and offline capabilities</li>
+                        <li><strong>Google Wallet</strong> for contactless payments and passes</li>
+                        <li><strong>Gmail</strong> with smart reply suggestions</li>
+                        <li><strong>Calendar</strong> with proactive reminders and schedule suggestions</li>
+                        <li><strong>YouTube Music</strong> for on-the-go streaming and offline playlists</li>
+                        <li><strong>Google Home</strong> controls for smart devices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <p>Integration with your Pixel phone is smoother than ever, with features like Camera Control letting you use your watch as a remote shutter, Find My Device helping you locate your lost phone (or your watch from your phone), and call handoff that lets you start a call on your watch and seamlessly transfer it to your phone.</p>
+        
+        <h2>Price, availability, and the competition</h2>
+        
+        <p>The Google Pixel Watch 3 is available for <span class="word-with-itab" data-itab-id="pricing-compare">pre-order today<span class="itab-icon">i</span></span> and will be in stores starting September 10, 2024. Pricing starts at $399 for the 41mm Bluetooth/Wi-Fi model and $429 for the 45mm version, with cellular models available for $499 and $529 respectively.</p>
+        
+        <!-- Pricing and Comparison iTabs -->
+        <div id="pricing-compare" class="itab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="pricing-details">Pricing</button>
+                <button class="tab-button" data-tab="competition">VS Competition</button>
+                <button class="tab-button" data-tab="value">Value Proposition</button>
+            </div>
+            <div class="tab-content">
+                <div id="pricing-details" class="tab-panel active">
+                    <p><strong>Google Pixel Watch 3 Pricing:</strong></p>
+                    
+                    <ul class="feature-list">
+                        <li>41mm Bluetooth/Wi-Fi: $399</li>
+                        <li>41mm 4G LTE: $499</li>
+                        <li>45mm Bluetooth/Wi-Fi: $429</li>
+                        <li>45mm 4G LTE: $529</li>
+                    </ul>
+                    
+                    <p>All models come with 6 months of Fitbit Premium subscription included ($59.94 value).</p>
+                    
+                    <p><strong>Available colors:</strong> Matte Black, Polished Silver, Champagne Gold, Hazel</p>
+                    
+                    <p><strong>Available at:</strong> Google Store, major retailers including Best Buy, Amazon, and carrier stores</p>
+                </div>
+                <div id="competition" class="tab-panel">
+                    <p><strong>Competitive Landscape:</strong></p>
+                    
+                    <table class="comparison-table">
+                        <tr>
+                            <th>Model</th>
+                            <th>Starting Price</th>
+                            <th>Battery Life</th>
+                            <th>Key Advantage</th>
+                        </tr>
+                        <tr>
+                            <td>Pixel Watch 3</td>
+                            <td>$399</td>
+                            <td>36 hours</td>
+                            <td>Fitbit integration, AI features</td>
+                        </tr>
+                        <tr>
+                            <td>Apple Watch Series 9</td>
+                            <td>$399</td>
+                            <td>18 hours</td>
+                            <td>iOS integration, app ecosystem</td>
+                        </tr>
+                        <tr>
+                            <td>Samsung Galaxy Watch 6</td>
+                            <td>$299</td>
+                            <td>30 hours</td>
+                            <td>Lower price, Samsung ecosystem</td>
+                        </tr>
+                        <tr>
+                            <td>Garmin Venu 3</td>
+                            <td>$449</td>
+                            <td>14 days</td>
+                            <td>Battery life, advanced sports tracking</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="value-tab" class="tab-panel">
+                    <p>The Pixel Watch 3 offers compelling value in several areas:</p>
+                    
+                    <ul class="feature-list">
+                        <li><strong>For Fitness Enthusiasts:</strong> Fitbit Premium integration provides advanced metrics, guided workouts, and personalized insights</li>
+                        <li><strong>For Android Users:</strong> Seamless integration with Pixel phones and the broader Android ecosystem</li>
+                        <li><strong>For Health Conscious:</strong> FDA-cleared sleep apnea detection and comprehensive health monitoring</li>
+                        <li><strong>For Daily Wear:</strong> Improved battery life and elegant design make it practical for everyday use</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <p>How does it stack up against the competition? With its combination of premium hardware, AI-powered features, and deep Fitbit integration, the Pixel Watch 3 presents a compelling option for Android users, particularly those with Pixel phones. While Apple Watch remains the benchmark for iPhone users, the Pixel Watch 3's battery life advantage, sleep apnea detection, and Fitbit fitness ecosystem give it unique strengths in the increasingly competitive smartwatch market.</p>
+        
+        <div class="note">
+            <p><strong>Early reviews are positive:</strong> "The Pixel Watch 3 represents Google's strongest smartwatch offering yet, with the larger size option and significantly improved battery life addressing the biggest pain points of previous models." - TechRadar</p>
+        </div>
+        
+        <h2>Is it worth the upgrade?</h2>
+        
+        <p>If you're currently using the original Pixel Watch, the upgrade to the Pixel Watch 3 is substantial – better battery life, faster performance, and significantly improved health and fitness features make it a worthwhile consideration. For Pixel Watch 2 owners, the calculus is a bit more nuanced: the larger size option, sleep apnea detection, and battery improvements are welcome, but may not be compelling enough for everyone to upgrade just one generation later.</p>
+        
+        <p>For Android users who haven't yet entered the smartwatch market, particularly those with Pixel phones, the Pixel Watch 3 represents Google's most complete wearable offering to date. The combination of refined hardware, Wear OS 5, and Fitbit's fitness expertise delivers a well-rounded experience that can help you stay connected, active, and healthy.</p>
+        
+        <div class="highlight-box">
+            <p>The Pixel Watch 3 will be available in 27 countries worldwide, with pre-orders starting today at the Google Store and major retailers. Early purchasers will receive a free six-month Fitbit Premium membership, giving them access to advanced insights, guided programs, and more detailed sleep analytics.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2024 Google LLC. All rights reserved.</p>
+        <p>Android, Google Pixel, Fitbit, and related marks are trademarks of Google LLC.</p>
+    </footer>
+    
+    <!-- JavaScript for iTabs functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching functionality
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabContainer = button.closest('.itab-container');
+                    const tabId = button.getAttribute('data-tab');
+                    
+                    // Deactivate all tabs in this container
+                    tabContainer.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+                    tabContainer.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                    
+                    // Activate the selected tab
+                    button.classList.add('active');
+                    tabContainer.querySelector('#' + tabId).classList.add('active');
+                });
+            });
+            
+            // iTabs icon click functionality
+            document.querySelectorAll('.itab-icon').forEach(icon => {
+                icon.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const parentSpan = this.closest('.word-with-itab');
+                    const itabId = parentSpan.getAttribute('data-itab-id');
+                    const itabElement = document.getElementById(itabId);
+                    
+                    // Close all open iTabs
+                    document.querySelectorAll('.itab-container').forEach(container => {
+                        container.style.display = 'none';
+                    });
+                    
+                    // Position and show the selected iTab
+                    if (itabElement) {
+                        const iconRect = this.getBoundingClientRect();
+                        itabElement.style.display = 'block';
+                        itabElement.style.top = (iconRect.bottom + window.scrollY + 5) + 'px';
+                        itabElement.style.left = Math.max(0, iconRect.left + window.scrollX - 180) + 'px';
+                    }
+                });
+            });
+            
+            // Close iTabs when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.word-with-itab') && !e.target.closest('.itab-container')) {
+                    document.querySelectorAll('.itab-container').forEach(container => {
+                        container.style.display = 'none';
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
